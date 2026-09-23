@@ -1,778 +1,675 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV - Cindy Jovanna Silitonga</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<title>CV - Cindy Jovanna Silitonga</title>
 
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 35px 20px;
+    background: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
+
+.cv {
+    max-width: 850px;
+    margin: auto;
+    background: #fff;
+    padding: 42px 52px;
+    box-shadow: 0 4px 18px rgba(0,0,0,.08);
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #222;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.name {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    margin-bottom: 8px;
+}
+
+.headline {
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 14px;
+}
+
+.contact {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.photo {
+    width: 115px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+/* SECTION */
+section {
+    margin-top: 27px;
+}
+
+h2 {
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin: 0 0 15px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #bbb;
+}
+
+p {
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0 0 10px;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.item-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.item-subtitle {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+ul {
+    margin: 5px 0 0 18px;
+    padding: 0;
+}
+
+li {
+    font-size: 13px;
+    line-height: 1.65;
+    margin-bottom: 3px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.skill-title {
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.skill-text {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.interest {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
     body {
-      margin: 0;
-      padding: 35px 20px;
-      background: #f2f2f2;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #222;
+        padding: 0;
     }
 
     .cv {
-      max-width: 850px;
-      margin: auto;
-      background: #fff;
-      padding: 42px 52px;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+        width: 100%;
+        padding: 28px 22px;
+        box-shadow: none;
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 28px;
-      padding-bottom: 24px;
-      border-bottom: 2px solid #222;
+        align-items: flex-start;
     }
 
-    .head {
-      flex: 1;
-    }
-
-    h1 {
-      margin: 0 0 7px;
-      font-size: 28px;
-      letter-spacing: 1px;
-      color: #111;
-    }
-
-    .headline {
-      margin: 0 0 15px;
-      font-size: 14px;
-      font-weight: 600;
-      color: #444;
-    }
-
-    .contact {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      font-size: 12.5px;
-    }
-
-    .contact a {
-      color: #222;
-      text-decoration: none;
+    .name {
+        font-size: 24px;
     }
 
     .photo {
-      width: 115px;
-      height: 145px;
-      object-fit: cover;
-      border-radius: 6px;
-      border: 1px solid #ddd;
-      flex-shrink: 0;
-    }
-
-    section {
-      margin-top: 26px;
-    }
-
-    h2 {
-      margin: 0 0 13px;
-      padding-bottom: 6px;
-      border-bottom: 1.5px solid #222;
-      font-size: 15px;
-      letter-spacing: 1px;
-    }
-
-    .profile {
-      text-align: justify;
-      font-size: 12.5px;
-      line-height: 1.7;
-      margin: 0;
-    }
-
-    .item {
-      margin-bottom: 18px;
-    }
-
-    .item-head {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 4px;
-    }
-
-    .title {
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    .date {
-      font-size: 11.5px;
-      color: #555;
-      white-space: nowrap;
-    }
-
-    .sub {
-      font-size: 12px;
-      font-style: italic;
-      color: #444;
-    }
-
-    ul {
-      margin: 5px 0 0;
-      padding-left: 19px;
-    }
-
-    li {
-      margin-bottom: 3px;
-      font-size: 12px;
-      line-height: 1.55;
+        width: 95px;
+        height: 120px;
     }
 
     .skills {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .skill {
-      font-size: 12px;
-      line-height: 1.65;
-    }
-
-    .skill strong {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 12.5px;
-    }
-
-    .interest {
-      font-size: 12px;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 12px;
-      }
-
-      .cv {
-        padding: 28px 23px;
-      }
-
-      header {
-        align-items: flex-start;
-      }
-
-      h1 {
-        font-size: 22px;
-      }
-
-      .photo {
-        width: 88px;
-        height: 112px;
-      }
-
-      .item-head {
-        flex-direction: column;
-        gap: 2px;
-      }
-
-      .date {
-        white-space: normal;
-      }
-
-      .skills {
         grid-template-columns: 1fr;
-      }
     }
+}
 
-    @media print {
-      body {
-        padding: 0;
+/* PRINT */
+@media print {
+    body {
         background: #fff;
-      }
-
-      .cv {
-        max-width: none;
-        box-shadow: none;
-      }
+        padding: 0;
     }
-  </style>
+
+    .cv {
+        box-shadow: none;
+        max-width: 100%;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <div class="cv">
 
-  <!-- HEADER -->
-  <header>
+    <!-- HEADER -->
+    <header>
 
-    <div class="head">
+        <div class="header-left">
 
-      <h1>CINDY JOVANNA SILITONGA</h1>
+            <div class="name">
+                CINDY JOVANNA SILITONGA
+            </div>
 
-      <p class="headline">
-        Mahasiswa Sistem Informasi | Business Analyst Enthusiast
-      </p>
+            <div class="headline">
+                Mahasiswa Sistem Informasi | Business Analyst Enthusiast
+            </div>
 
-      <div class="contact">
-        <div>
-          📧
-          <a href="mailto:vanna.jvna@gmail.com">
-            vanna.jvna@gmail.com
-          </a>
+            <div class="contact">
+                Email: vanna.jvna@gmail.com<br>
+                Telepon: 081212202961<br>
+                Jakarta, Indonesia
+            </div>
+
         </div>
 
-        <div>📱 081212202961</div>
+        <!-- FOTO -->
+        <img
+            class="photo"
+            src="data:image/jpeg;base64,FOTO_BASE64"
+            alt="Foto Cindy Jovanna Silitonga"
+        >
 
-        <div>📍 Jakarta, Indonesia</div>
-      </div>
+    </header>
 
-    </div>
 
-    <!-- FOTO -->
-    <img
-      class="photo"
-      src="data:image/jpeg;base64,PHOTO_DATA"
-      alt="Foto Cindy Jovanna Silitonga"
-    >
+    <!-- PROFIL -->
+    <section>
 
-  </header>
+        <h2>PROFIL</h2>
 
+        <p>
+            Mahasiswa Program Studi Sistem Informasi di Telkom University Jakarta
+            dengan ketertarikan pada bidang Business Analysis, Information Systems,
+            dan Project Management. Memiliki pengalaman dalam organisasi,
+            kepanitiaan, kepemimpinan, serta kegiatan usaha mandiri.
+            Terbiasa bekerja secara kolaboratif, mengelola kegiatan,
+            berkomunikasi dengan berbagai pihak, serta menyelesaikan tanggung jawab
+            sesuai dengan target yang ditentukan.
+        </p>
 
-  <!-- PROFIL -->
-  <section>
+        <p>
+            Memiliki kemampuan dalam leadership, teamwork, communication,
+            problem solving, dan project coordination, serta memiliki kemauan
+            untuk terus belajar dan mengembangkan kemampuan baik secara akademik
+            maupun profesional.
+        </p>
 
-    <h2>PROFIL</h2>
+    </section>
 
-    <p class="profile">
 
-      Mahasiswa Program Studi Sistem Informasi di Telkom University Jakarta
-      dengan ketertarikan pada bidang Business Analysis, Information Systems,
-      dan Project Management. Memiliki pengalaman dalam organisasi,
-      kepanitiaan, kepemimpinan, serta kegiatan usaha mandiri. Terbiasa bekerja
-      secara kolaboratif, mengelola kegiatan, berkomunikasi dengan berbagai
-      pihak, serta menyelesaikan tanggung jawab sesuai dengan target yang
-      ditentukan.
+    <!-- PENDIDIKAN -->
+    <section>
 
-      <br><br>
+        <h2>PENDIDIKAN</h2>
 
-      Memiliki kemampuan dalam leadership, teamwork, communication,
-      problem solving, dan project coordination, serta memiliki kemauan untuk
-      terus belajar dan mengembangkan kemampuan baik secara akademik maupun
-      profesional.
+        <div class="item">
 
-    </p>
+            <div class="item-title">
+                TELKOM UNIVERSITY JAKARTA
+            </div>
 
-  </section>
+            <div class="item-subtitle">
+                S1 Sistem Informasi | 2025 – Sekarang
+            </div>
 
+            <p>
+                <strong>IPK: 3,76</strong>
+            </p>
 
-  <!-- PENDIDIKAN -->
-  <section>
+            <ul>
+                <li>
+                    Mempelajari dasar-dasar Sistem Informasi, pemrograman,
+                    database, analisis sistem, jaringan komputer, dan proses bisnis.
+                </li>
 
-    <h2>PENDIDIKAN</h2>
+                <li>
+                    Terlibat dalam berbagai project akademik yang berkaitan
+                    dengan perancangan sistem dan pemecahan masalah.
+                </li>
 
-    <div class="item">
+                <li>
+                    Aktif mengikuti kegiatan organisasi dan kepanitiaan mahasiswa.
+                </li>
+            </ul>
 
-      <div class="item-head">
+        </div>
 
-        <span class="title">
-          TELKOM UNIVERSITY JAKARTA
-        </span>
 
-        <span class="date">
-          2025 – Sekarang
-        </span>
+        <div class="item">
 
-      </div>
+            <div class="item-title">
+                SMA MARDI WALUYA CIBINONG
+            </div>
 
-      <div class="sub">
-        S1 Sistem Informasi | IPK: 3,76
-      </div>
+            <div class="item-subtitle">
+                2022 – 2025
+            </div>
 
-      <ul>
+            <ul>
+                <li>
+                    Aktif dalam kegiatan organisasi sekolah dan kegiatan siswa.
+                </li>
 
-        <li>
-          Mempelajari dasar-dasar Sistem Informasi, pemrograman,
-          database, analisis sistem, jaringan komputer, dan proses bisnis.
-        </li>
+                <li>
+                    Memiliki pengalaman kepemimpinan sebagai Ketua OSIS.
+                </li>
 
-        <li>
-          Terlibat dalam berbagai project akademik yang berkaitan
-          dengan perancangan sistem dan pemecahan masalah.
-        </li>
+                <li>
+                    Terlibat dalam perencanaan dan pelaksanaan berbagai kegiatan sekolah.
+                </li>
+            </ul>
 
-        <li>
-          Aktif mengikuti kegiatan organisasi dan kepanitiaan mahasiswa.
-        </li>
+        </div>
 
-      </ul>
+    </section>
 
-    </div>
 
+    <!-- ORGANISASI -->
+    <section>
 
-    <div class="item">
+        <h2>PENGALAMAN ORGANISASI</h2>
 
-      <div class="item-head">
+        <div class="item">
 
-        <span class="title">
-          SMA MARDI WALUYA CIBINONG
-        </span>
+            <div class="item-title">
+                PMK TELKOM UNIVERSITY JAKARTA
+            </div>
 
-        <span class="date">
-          2022 – 2025
-        </span>
+            <div class="item-subtitle">
+                BPH – Koordinator Kerohanian | 2025 – Sekarang
+            </div>
 
-      </div>
+            <ul>
+                <li>
+                    Mengkoordinasikan kegiatan dan pelayanan pada bidang kerohanian.
+                </li>
 
-      <ul>
+                <li>
+                    Berkoordinasi dengan pengurus dan anggota dalam mempersiapkan
+                    berbagai kegiatan PMK.
+                </li>
 
-        <li>
-          Aktif dalam kegiatan organisasi sekolah dan kegiatan siswa.
-        </li>
+                <li>
+                    Terlibat dalam perencanaan konsep, teknis, dan pelaksanaan kegiatan.
+                </li>
 
-        <li>
-          Memiliki pengalaman kepemimpinan sebagai Ketua OSIS.
-        </li>
+                <li>
+                    Membantu membagi dan mengkoordinasikan tugas anggota sesuai
+                    kebutuhan kegiatan.
+                </li>
 
-        <li>
-          Terlibat dalam perencanaan dan pelaksanaan berbagai kegiatan sekolah.
-        </li>
+                <li>
+                    Berkomunikasi dengan berbagai pihak untuk memastikan kegiatan
+                    berjalan dengan baik.
+                </li>
 
-      </ul>
+                <li>
+                    Berkontribusi dalam kegiatan seperti Welcoming Party,
+                    Graduation Party, Paskah, Retret, Mentoring, PKKMB,
+                    dan kegiatan PMK lainnya.
+                </li>
+            </ul>
 
-    </div>
+        </div>
 
-  </section>
 
+        <div class="item">
 
-  <!-- PENGALAMAN ORGANISASI -->
-  <section>
+            <div class="item-title">
+                OSIS SMA MARDI WALUYA CIBINONG
+            </div>
 
-    <h2>PENGALAMAN ORGANISASI</h2>
+            <div class="item-subtitle">
+                Ketua OSIS
+            </div>
 
+            <ul>
+                <li>
+                    Memimpin dan mengkoordinasikan anggota OSIS dalam menjalankan
+                    program kerja.
+                </li>
 
-    <div class="item">
+                <li>
+                    Bertanggung jawab dalam perencanaan dan pelaksanaan kegiatan sekolah.
+                </li>
 
-      <div class="item-head">
+                <li>
+                    Berkoordinasi dengan siswa, guru, dan pihak sekolah.
+                </li>
 
-        <span class="title">
-          PMK TELKOM UNIVERSITY JAKARTA
-        </span>
+                <li>
+                    Membagi tugas dan memastikan setiap anggota menjalankan tanggung jawabnya.
+                </li>
 
-        <span class="date">
-          2025 – Sekarang
-        </span>
+                <li>
+                    Mengembangkan kemampuan kepemimpinan, komunikasi,
+                    kerja sama tim, dan problem solving.
+                </li>
+            </ul>
 
-      </div>
+        </div>
 
-      <div class="sub">
-        BPH – Koordinator Kerohanian
-      </div>
+    </section>
 
-      <ul>
 
-        <li>
-          Mengkoordinasikan kegiatan dan pelayanan pada bidang kerohanian.
-        </li>
+    <!-- KEPANITIAAN -->
+    <section>
 
-        <li>
-          Berkoordinasi dengan pengurus dan anggota dalam mempersiapkan
-          berbagai kegiatan PMK.
-        </li>
+        <h2>PENGALAMAN KEPANITIAAN</h2>
 
-        <li>
-          Terlibat dalam perencanaan konsep, teknis, dan pelaksanaan kegiatan.
-        </li>
+        <div class="item">
 
-        <li>
-          Membantu membagi dan mengkoordinasikan tugas anggota sesuai
-          kebutuhan kegiatan.
-        </li>
+            <div class="item-title">
+                PANITIA PASKAH – PMK TELKOM UNIVERSITY JAKARTA
+            </div>
 
-        <li>
-          Berkomunikasi dengan berbagai pihak untuk memastikan kegiatan
-          berjalan dengan baik.
-        </li>
+            <div class="item-subtitle">
+                Sekretaris Panitia
+            </div>
 
-        <li>
-          Berkontribusi dalam kegiatan seperti Welcoming Party,
-          Graduation Party, Paskah, Retret, Mentoring, PKKMB,
-          dan kegiatan PMK lainnya.
-        </li>
+            <ul>
+                <li>
+                    Mengelola administrasi dan kebutuhan dokumentasi kepanitiaan.
+                </li>
 
-      </ul>
+                <li>
+                    Menyusun dan merapikan informasi serta hasil rapat.
+                </li>
 
-    </div>
+                <li>
+                    Membantu koordinasi antar-divisi selama proses persiapan acara.
+                </li>
 
+                <li>
+                    Memantau kebutuhan administrasi dan informasi yang diperlukan
+                    setiap divisi.
+                </li>
 
-    <div class="item">
+                <li>
+                    Terlibat dalam persiapan hingga pelaksanaan kegiatan.
+                </li>
+            </ul>
 
-      <div class="item-head">
+        </div>
 
-        <span class="title">
-          OSIS SMA MARDI WALUYA CIBINONG
-        </span>
 
-      </div>
+        <div class="item">
 
-      <div class="sub">
-        Ketua OSIS
-      </div>
+            <div class="item-title">
+                PMK GRADUATION PARTY
+            </div>
 
-      <ul>
+            <div class="item-subtitle">
+                Panitia & MC
+            </div>
 
-        <li>
-          Memimpin dan mengkoordinasikan anggota OSIS dalam menjalankan
-          program kerja.
-        </li>
+            <ul>
+                <li>
+                    Membantu mempersiapkan rangkaian acara dan kebutuhan teknis kegiatan.
+                </li>
 
-        <li>
-          Bertanggung jawab dalam perencanaan dan pelaksanaan kegiatan sekolah.
-        </li>
+                <li>
+                    Berkoordinasi dengan panitia terkait susunan acara.
+                </li>
 
-        <li>
-          Berkoordinasi dengan siswa, guru, dan pihak sekolah.
-        </li>
+                <li>
+                    Bertugas sebagai MC dan memandu jalannya acara.
+                </li>
 
-        <li>
-          Membagi tugas dan memastikan setiap anggota menjalankan
-          tanggung jawabnya.
-        </li>
+                <li>
+                    Menjaga komunikasi dengan panitia dan peserta selama kegiatan berlangsung.
+                </li>
+            </ul>
 
-        <li>
-          Mengembangkan kemampuan kepemimpinan, komunikasi,
-          kerja sama tim, dan problem solving.
-        </li>
+        </div>
 
-      </ul>
 
-    </div>
+        <div class="item">
 
-  </section>
+            <div class="item-title">
+                PMK WELCOMING PARTY
+            </div>
 
+            <div class="item-subtitle">
+                Panitia Acara
+            </div>
 
-  <!-- PENGALAMAN KEPANITIAAN -->
-  <section>
+            <ul>
+                <li>
+                    Terlibat dalam penyusunan konsep kegiatan untuk mahasiswa baru.
+                </li>
 
-    <h2>PENGALAMAN KEPANITIAAN</h2>
+                <li>
+                    Membantu menyusun rundown dan alur kegiatan.
+                </li>
 
+                <li>
+                    Mengembangkan konsep games dan aktivitas interaktif.
+                </li>
 
-    <div class="item">
+                <li>
+                    Berkoordinasi dengan anggota panitia dalam mempersiapkan kebutuhan acara.
+                </li>
+            </ul>
 
-      <div class="item-head">
+        </div>
 
-        <span class="title">
-          PANITIA PASKAH – PMK TELKOM UNIVERSITY JAKARTA
-        </span>
 
-      </div>
+        <div class="item">
 
-      <div class="sub">
-        Sekretaris Panitia
-      </div>
+            <div class="item-title">
+                PKKMB / STUDENT FAIR PMK
+            </div>
 
-      <ul>
+            <div class="item-subtitle">
+                Panitia
+            </div>
 
-        <li>
-          Mengelola administrasi dan kebutuhan dokumentasi kepanitiaan.
-        </li>
+            <ul>
+                <li>
+                    Terlibat dalam persiapan dan pelaksanaan kegiatan mahasiswa baru.
+                </li>
 
-        <li>
-          Menyusun dan merapikan informasi serta hasil rapat.
-        </li>
+                <li>
+                    Membantu menyusun konsep kegiatan yang interaktif dan menarik.
+                </li>
 
-        <li>
-          Membantu koordinasi antar-divisi selama proses persiapan acara.
-        </li>
+                <li>
+                    Berkoordinasi dengan tim dalam pembagian tugas sebelum dan selama acara.
+                </li>
 
-        <li>
-          Memantau kebutuhan administrasi dan informasi yang diperlukan
-          setiap divisi.
-        </li>
+                <li>
+                    Terlibat dalam pelayanan dan pendampingan mahasiswa baru.
+                </li>
+            </ul>
 
-        <li>
-          Terlibat dalam persiapan hingga pelaksanaan kegiatan.
-        </li>
+        </div>
 
-      </ul>
 
-    </div>
+        <div class="item">
 
+            <div class="item-title">
+                PMK MENTORING
+            </div>
 
-    <div class="item">
+            <div class="item-subtitle">
+                Panitia / Tim Pelaksana
+            </div>
 
-      <div class="item-head">
+            <ul>
+                <li>
+                    Membantu mempersiapkan kebutuhan kegiatan mentoring.
+                </li>
 
-        <span class="title">
-          PMK GRADUATION PARTY
-        </span>
+                <li>
+                    Berkoordinasi dengan tim terkait teknis dan susunan kegiatan.
+                </li>
 
-      </div>
+                <li>
+                    Terlibat dalam pelaksanaan kegiatan dan memastikan rangkaian
+                    acara berjalan sesuai rencana.
+                </li>
+            </ul>
 
-      <div class="sub">
-        Panitia & MC
-      </div>
+        </div>
 
-      <ul>
+    </section>
 
-        <li>
-          Membantu mempersiapkan rangkaian acara dan kebutuhan teknis kegiatan.
-        </li>
 
-        <li>
-          Berkoordinasi dengan panitia terkait susunan acara.
-        </li>
+    <!-- PENGALAMAN KERJA -->
+    <section>
 
-        <li>
-          Bertugas sebagai MC dan memandu jalannya acara.
-        </li>
+        <h2>PENGALAMAN KERJA</h2>
 
-        <li>
-          Menjaga komunikasi dengan panitia dan peserta selama kegiatan
-          berlangsung.
-        </li>
+        <div class="item">
 
-      </ul>
+            <div class="item-title">
+                USAHA / BISNIS MANDIRI
+            </div>
 
-    </div>
+            <div class="item-subtitle">
+                Owner / Pengelola
+            </div>
 
+        </div>
 
-    <div class="item">
+    </section>
 
-      <div class="item-head">
 
-        <span class="title">
-          PMK WELCOMING PARTY
-        </span>
+    <!-- KEAHLIAN -->
+    <section>
 
-      </div>
+        <h2>KEAHLIAN</h2>
 
-      <div class="sub">
-        Panitia Acara
-      </div>
+        <div class="skills">
 
-      <ul>
+            <div>
 
-        <li>
-          Terlibat dalam penyusunan konsep kegiatan untuk mahasiswa baru.
-        </li>
+                <div class="skill-title">
+                    Technical Skills
+                </div>
 
-        <li>
-          Membantu menyusun rundown dan alur kegiatan.
-        </li>
+                <div class="skill-text">
+                    Microsoft Word, PowerPoint, Excel, Figma,
+                    MySQL, DBeaver, Java, C#, Cisco Packet Tracer,
+                    SAP Dasar
+                </div>
 
-        <li>
-          Mengembangkan konsep games dan aktivitas interaktif.
-        </li>
+            </div>
 
-        <li>
-          Berkoordinasi dengan anggota panitia dalam mempersiapkan
-          kebutuhan acara.
-        </li>
 
-      </ul>
+            <div>
 
-    </div>
+                <div class="skill-title">
+                    Soft Skills
+                </div>
 
+                <div class="skill-text">
+                    Leadership, Communication, Teamwork,
+                    Public Speaking, Problem Solving,
+                    Time Management, Project Coordination,
+                    Event Management, Adaptability
+                </div>
 
-    <div class="item">
+            </div>
 
-      <div class="item-head">
+        </div>
 
-        <span class="title">
-          PKKMB / STUDENT FAIR PMK
-        </span>
+    </section>
 
-      </div>
 
-      <div class="sub">
-        Panitia
-      </div>
+    <!-- PRESTASI -->
+    <section>
 
-      <ul>
+        <h2>PRESTASI</h2>
 
-        <li>
-          Terlibat dalam persiapan dan pelaksanaan kegiatan mahasiswa baru.
-        </li>
+        <ul>
 
-        <li>
-          Membantu menyusun konsep kegiatan yang interaktif dan menarik.
-        </li>
+            <li>
+                Ketua OSIS – SMA Mardi Waluya Cibinong
+            </li>
 
-        <li>
-          Berkoordinasi dengan tim dalam pembagian tugas sebelum dan
-          selama acara.
-        </li>
+            <li>
+                IPK 3,76 – Telkom University
+            </li>
 
-        <li>
-          Terlibat dalam pelayanan dan pendampingan mahasiswa baru.
-        </li>
+            <li>
+                Aktif dalam berbagai kegiatan organisasi mahasiswa
+            </li>
 
-      </ul>
+            <li>
+                Aktif sebagai panitia dalam berbagai kegiatan kampus
+            </li>
 
-    </div>
+            <li>
+                Berpengalaman sebagai MC dalam kegiatan mahasiswa
+            </li>
 
+            <li>
+                Terlibat dalam perencanaan dan koordinasi berbagai kegiatan organisasi
+            </li>
 
-    <div class="item">
+        </ul>
 
-      <div class="item-head">
+    </section>
 
-        <span class="title">
-          PMK MENTORING
-        </span>
 
-      </div>
+    <!-- INTEREST -->
+    <section>
 
-      <div class="sub">
-        Panitia / Tim Pelaksana
-      </div>
+        <h2>INTEREST</h2>
 
-      <ul>
+        <div class="interest">
+            Business Analysis • Information Systems • Project Management •
+            Leadership • Event Management • Organization • Digital Business
+        </div>
 
-        <li>
-          Membantu mempersiapkan kebutuhan kegiatan mentoring.
-        </li>
-
-        <li>
-          Berkoordinasi dengan tim terkait teknis dan susunan kegiatan.
-        </li>
-
-        <li>
-          Terlibat dalam pelaksanaan kegiatan dan memastikan rangkaian
-          acara berjalan sesuai rencana.
-        </li>
-
-      </ul>
-
-    </div>
-
-  </section>
-
-
-  <!-- PENGALAMAN KERJA -->
-  <section>
-
-    <h2>PENGALAMAN KERJA</h2>
-
-    <div class="item">
-
-      <div class="item-head">
-
-        <span class="title">
-          USAHA / BISNIS MANDIRI
-        </span>
-
-      </div>
-
-      <div class="sub">
-        Owner / Pengelola
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- KEAHLIAN -->
-  <section>
-
-    <h2>KEAHLIAN</h2>
-
-    <div class="skills">
-
-      <div class="skill">
-
-        <strong>TECHNICAL SKILLS</strong>
-
-        Microsoft Word<br>
-        Microsoft PowerPoint<br>
-        Microsoft Excel<br>
-        Figma<br>
-        MySQL<br>
-        DBeaver<br>
-        Java<br>
-        C#<br>
-        Cisco Packet Tracer<br>
-        SAP Dasar
-
-      </div>
-
-
-      <div class="skill">
-
-        <strong>SOFT SKILLS</strong>
-
-        Leadership<br>
-        Communication<br>
-        Teamwork<br>
-        Public Speaking<br>
-        Problem Solving<br>
-        Time Management<br>
-        Project Coordination<br>
-        Event Management<br>
-        Adaptability
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- PRESTASI -->
-  <section>
-
-    <h2>PRESTASI</h2>
-
-    <ul>
-
-      <li>
-        Ketua OSIS – SMA Mardi Waluya Cibinong
-      </li>
-
-      <li>
-        IPK 3,76 – Telkom University
-      </li>
-
-      <li>
-        Aktif dalam berbagai kegiatan organisasi mahasiswa
-      </li>
-
-      <li>
-        Aktif sebagai panitia dalam berbagai kegiatan kampus
-      </li>
-
-      <li>
-        Berpengalaman sebagai MC dalam kegiatan mahasiswa
-      </li>
-
-      <li>
-        Terlibat dalam perencanaan dan koordinasi berbagai kegiatan organisasi
-      </li>
-
-    </ul>
-
-  </section>
-
-
-  <!-- INTEREST -->
-  <section>
-
-    <h2>INTEREST</h2>
-
-    <div class="interest">
-
-      Business Analysis • Information Systems • Project Management •
-      Leadership • Event Management • Organization • Digital Business
-
-    </div>
-
-  </section>
+    </section>
 
 </div>
 
